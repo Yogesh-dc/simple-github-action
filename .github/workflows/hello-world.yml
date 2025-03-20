@@ -13,9 +13,12 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Display Hello World
-      run: |
-        echo "Hello, World!"
-        echo "hello sir how are you"
+      run: 
+          echo "Hello, World!"
+
+    - name: Display Hello Sir
+      run: 
+          echo "Hello, Sir!"
     
    
    
