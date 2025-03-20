@@ -1,0 +1,18 @@
+name: Hello Sir Workflow
+
+on:
+  workflow_run:
+    workflows: ["Hello World Workflow"]  # Name of the first workflow
+    types:
+      - completed
+
+jobs:
+  hello-sir-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Display Hello Sir
+        run: echo "Hello, Sir!"
